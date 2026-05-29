@@ -2,13 +2,14 @@
 
 ## Project Overview
 
-This project is a simple *Personal Profile Web Application* developed using:
+This project is a simple **Personal Profile Web Application** developed using:
 
 * HTML
-* Servlet
+* CSS
+* Java Servlet
 * JSP
-* CSS / Bootstrap
-* JavaScript (optional)
+* GlassFish Server
+* NetBeans IDE 8.2
 
 The application allows users to submit their personal information through an HTML form. The submitted data is processed using a Java Servlet and displayed neatly on a JSP page.
 
@@ -31,7 +32,7 @@ The objectives of this project are:
 
 The application collects the following user information:
 
-* Name
+* Full Name
 * Student ID
 * Program
 * Email
@@ -44,7 +45,7 @@ The application collects the following user information:
 
 1. User opens the HTML form page.
 2. User enters personal information.
-3. Form data is submitted using the *HTTP POST* method.
+3. Form data is submitted using the **HTTP POST** method.
 4. Servlet receives and processes the data.
 5. Processed data is forwarded to the JSP page.
 6. JSP displays the submitted information neatly.
@@ -53,47 +54,46 @@ The application collects the following user information:
 
 # Technologies Used
 
-| Technology   | Purpose                |
-| ------------ | ---------------------- |
-| HTML         | Create form interface  |
-| CSS          | Styling and layout     |
-| Bootstrap    | Responsive design      |
-| Java Servlet | Process form request   |
-| JSP          | Display submitted data |
-| JavaScript   | Optional interactivity |
+| Technology       | Purpose                 |
+| ---------------- | ----------------------- |
+| HTML             | Create form interface   |
+| CSS              | Styling and layout      |
+| Java Servlet     | Process form requests   |
+| JSP              | Display submitted data  |
+| GlassFish Server | Application server      |
+| NetBeans IDE 8.2 | Development environment |
 
 ---
 
 # Project Structure
 
-plaintext
-PersonalProfileWebApp/
+```plaintext
+PersonalProfileApp/
 │
-├── WebContent/
-│   ├── index.html
-│   ├── result.jsp
-│   └── css/
-│       └── style.css
-│
-├── src/
-│   └── servlet/
+├── Source Packages/
+│   └── controller/
 │       └── ProfileServlet.java
 │
+├── Web Pages/
+│   ├── index.html
+│   ├── result.jsp
+│   └── style.css
+│
 └── README.md
-
+```
 
 ---
 
 # Requirements
 
-The project must contain:
+The project contains:
 
-* At least one HTML page
+* One HTML page
 * One Servlet class
 * One JSP page
-* Creative interface design using CSS or Bootstrap
+* CSS styling for interface design
 
-Database integration is NOT required.
+Database integration is **not required**.
 
 ---
 
@@ -101,11 +101,11 @@ Database integration is NOT required.
 
 The application interface includes:
 
-* Modern color combinations
-* Clean layout structure
+* Clean and modern layout
+* Responsive form design
 * Readable fonts
-* Icons (optional)
-* Responsive design for mobile and desktop devices
+* User-friendly structure
+* Simple color styling
 
 ---
 
@@ -115,20 +115,31 @@ The application interface includes:
 
 Make sure the following software is installed:
 
-* JDK 8 or above
-* Apache Tomcat Server
+* JDK 8
 * NetBeans IDE 8.2
+* GlassFish Server
 
 ---
 
-## Steps to Run
+# Steps to Run
 
-1. Open NetBeans 8.2.
-2. Create a new Java Web Project.
-3. Add the HTML, Servlet, JSP, and CSS files.
-4. Configure Apache Tomcat Server.
-5. Run the project.
-6. Open the application in your browser.
+1. Open NetBeans IDE 8.2.
+2. Create or open the `PersonalProfileApp` project.
+3. Ensure GlassFish Server is configured in NetBeans.
+4. Build the project.
+5. Run the application using:
+
+   * Right click project → Run
+   * OR press `F6`
+6. Browser opens automatically.
+
+---
+
+# Application URL
+
+```plaintext
+http://localhost:8080/PersonalProfileApp
+```
 
 ---
 
@@ -138,8 +149,8 @@ The system should:
 
 * Accept user input from the HTML form
 * Process the data through Servlet
-* Display user profile details on JSP page
-* Provide a responsive and attractive interface
+* Display profile information dynamically on JSP page
+* Provide a clean and responsive interface
 
 ---
 
@@ -148,12 +159,13 @@ The system should:
 By completing this project, students will be able to:
 
 * Build a simple Java web application
-* Understand Servlet and JSP interaction
+* Understand Servlet and JSP integration
 * Handle HTTP requests and responses
 * Design responsive web interfaces
+* Deploy applications using GlassFish Server
 
 ---
 
 # Author
 
-Developed for educational purposes using Java Web Technologies.
+Developed for educational purposes using Java Web Technologies and NetBeans IDE 8.2.
