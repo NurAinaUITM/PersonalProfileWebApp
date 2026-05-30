@@ -151,7 +151,9 @@ The system should:
 * Process the data through Servlet
 * Display profile information dynamically on JSP page
 * Provide a clean and responsive interface
-<img width="1195" height="578" alt="image" src="https://github.com/user-attachments/assets/66998b58-af0f-4126-9997-958ad3ae9336" />
+
+<img width="1385" height="1000" alt="image" src="https://github.com/user-attachments/assets/c47e08b2-7e0b-4694-a76e-d2c2577287fa" />
+<img width="1150" height="532" alt="image" src="https://github.com/user-attachments/assets/cb980802-5dbd-4180-93bd-35255b50f0ae" />
 
 ---
 
