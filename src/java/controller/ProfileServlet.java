@@ -8,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import bean.ProfileBean;
+import dao.ProfileDAO;
 
 @WebServlet(name = "ProfileServlet",
             urlPatterns = {"/ProfileServlet"})
@@ -37,23 +39,24 @@ public class ProfileServlet extends HttpServlet {
         String intro =
                 request.getParameter("intro");
 
-        // Send data to JSP
-        request.setAttribute("name", name);
+        // Create JavaBean object
+        ProfileBean profile = new ProfileBean();
 
-        request.setAttribute("studentId",
-                             studentId);
+        profile.setName(name);
+        profile.setStudentId(studentId);
+        profile.setProgramme(program);
+        profile.setEmail(email);
+        profile.setHobbies(hobbies);
+        profile.setIntroduction(intro);
 
-        request.setAttribute("program",
-                             program);
+        // Save into database
+        ProfileDAO dao = new ProfileDAO();
 
-        request.setAttribute("email",
-                             email);
+        boolean success = dao.saveProfile(profile);
 
-        request.setAttribute("hobbies",
-                             hobbies);
-
-        request.setAttribute("intro",
-                             intro);
+        // Send bean and save status to JSP
+        request.setAttribute("profile", profile);
+        request.setAttribute("success", success);
 
         // Forward to result page
         request.getRequestDispatcher("result.jsp")
